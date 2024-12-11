@@ -7,7 +7,6 @@ root = Tk()
 root.title("Weather App")
 root.iconbitmap("taco1.ico")
 root.geometry("400x60")
-# root.configure(background = "green")
 
 def zip_lookup():
        try:
