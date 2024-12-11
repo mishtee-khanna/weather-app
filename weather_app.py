@@ -10,13 +10,7 @@ root.geometry("400x60")
 # root.configure(background = "green")
 
 def zip_lookup():
-    # zip.get()
-    # zip_label = Label(root , text = zip.get())
-    # zip_label.grid(row = 1, column = 0  , columnspace = 2)
-
-
-# https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=20002&distance=25&API_KEY=89C0897E-2BA1-4D11-94FA-0A0933AE9505
-    try:
+       try:
         api_request = requests.get("https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=" + zip.get() + "&distance=25&API_KEY=89C0897E-2BA1-4D11-94FA-0A0933AE9505")
         api = json.loads(api_request.content)
         city = api[0]['ReportingArea']
